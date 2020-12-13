@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instawloader</title>
+</head>
+<body>
+    <div class="profile">
+        <img src="" alt="" class="profile-img" srcset="<%=info.username_picture_url%>">
+        <p class="username"><%= info.username %></p>
+    </div>
+    <p>Total de posts: <%= info.posts_count %></p>
+    <p>Total de seguidores: <%= info.followers_count %></p>
+    <p>Total seguindo: <%= info.followings_count %></p>
+
+    <%for (var i in info.recent_posts){%>
+        <img src="" alt="" srcset="<%=info.recent_posts[i].photo%>">  
+    <%}%>
+</body>
+</html>
